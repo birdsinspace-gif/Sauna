@@ -25,7 +25,7 @@ export default function App() {
     },
     {
       title: "Evening Programming",
-      body: "Breathwork, ambient DJ nights, tea service, founder breakfasts, and curated community sessions."
+      body: "Breathwork, ambient music nights, tea service, founder breakfasts, and curated community sessions."
     }
   ];
 
@@ -88,85 +88,68 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#f5f0e8] text-[#181512]">
-      <section className="overflow-hidden border-b border-[#ddd2c3] bg-[#efe6d8]">
-        <div className="mx-auto max-w-7xl px-6 py-28 md:px-10 md:py-32">
-          <motion.p
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55 }}
-            style={{ transform: `translateY(${scrollY * 0.08}px)` }}
-            className="text-sm uppercase tracking-[0.32em] text-[#6c6256]"
-          >
-            Ember House
-          </motion.p>
+      <section className="relative min-h-[92vh] overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(17,14,11,0.48), rgba(17,14,11,0.62)), url('/sauna-hero.jpg')",
+            transform: `translateY(${scrollY * 0.18}px) scale(1.05)`
+          }}
+        />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_35%)]" />
 
-          <motion.h1
-            initial={{ opacity: 0, y: 34 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.85, delay: 0.05 }}
-            style={{ transform: `translateY(${scrollY * 0.16}px)` }}
-            className="mt-6 max-w-5xl text-5xl font-semibold leading-[0.98] tracking-tight md:text-7xl"
-          >
-            Sauna. Cold plunge.{" "}
-            <span className="text-[#8a4b2a]">Neighborhood ritual.</span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 26 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, delay: 0.15 }}
-            style={{ transform: `translateY(${scrollY * 0.1}px)` }}
-            className="mt-8 max-w-2xl text-lg leading-8 text-[#5b5349] md:text-xl"
-          >
-            A premium sauna and cold plunge social club in Cabbagetown, Atlanta,
-            designed for recovery, rhythm, and real connection.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.25 }}
-            className="mt-10 flex flex-wrap gap-4"
-          >
-            <a
-              href="#membership"
-              className="rounded-2xl bg-[#1f2c26] px-8 py-4 text-sm font-medium text-white transition hover:bg-[#18211d]"
+        <div className="relative mx-auto flex min-h-[92vh] max-w-7xl items-end px-6 pb-16 pt-28 md:px-10 md:pb-20">
+          <div className="max-w-5xl">
+            <motion.p
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55 }}
+              className="text-sm uppercase tracking-[0.32em] text-[#d5c6b6]"
             >
-              View Memberships
-            </a>
-            <a
-              href="#concept"
-              className="rounded-2xl border border-[#cdbfae] bg-white/40 px-8 py-4 text-sm font-medium text-[#181512] transition hover:bg-white/70"
-            >
-              Explore the Concept
-            </a>
-          </motion.div>
+              Ember House
+            </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.35 }}
-            className="mt-16 grid max-w-4xl gap-4 text-sm text-[#5b5349] md:grid-cols-3"
-          >
-            <div className="rounded-2xl border border-[#d8cbbd] bg-white/40 p-5">
-              <p className="font-semibold text-[#181512]">Cabbagetown, Atlanta</p>
-              <p className="mt-2 leading-6">
-                Warehouse-edge atmosphere with a warm, elevated hospitality feel.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-[#d8cbbd] bg-white/40 p-5">
-              <p className="font-semibold text-[#181512]">Chill • Sweat • Connect</p>
-              <p className="mt-2 leading-6">
-                Built for nervous system reset and neighborhood belonging.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-[#d8cbbd] bg-white/40 p-5">
-              <p className="font-semibold text-[#181512]">Founding Member Ready</p>
-              <p className="mt-2 leading-6">
-                Premium wellness concept positioned for repeat local usage.
-              </p>
-            </div>
-          </motion.div>
+            <motion.h1
+              initial={{ opacity: 0, y: 34 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.85, delay: 0.05 }}
+              className="mt-6 max-w-5xl text-5xl font-semibold leading-[0.96] tracking-tight text-white md:text-7xl"
+            >
+              Sauna. Cold plunge.{" "}
+              <span className="text-[#d39a74]">Neighborhood ritual.</span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 26 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, delay: 0.16 }}
+              className="mt-8 max-w-2xl text-lg leading-8 text-[#efe4d7] md:text-xl"
+            >
+              A premium sauna and cold plunge social club in Cabbagetown, Atlanta,
+              designed for recovery, rhythm, and real connection.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.26 }}
+              className="mt-10 flex flex-wrap gap-4"
+            >
+              <a
+                href="#membership"
+                className="rounded-2xl bg-[#1f2c26] px-8 py-4 text-sm font-medium text-white transition hover:bg-[#18211d]"
+              >
+                View Memberships
+              </a>
+              <a
+                href="#concept"
+                className="rounded-2xl border border-white/30 bg-white/10 px-8 py-4 text-sm font-medium text-white transition hover:bg-white/15"
+              >
+                Explore the Concept
+              </a>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -200,32 +183,44 @@ export default function App() {
 
       <motion.section
         {...sectionFade}
-        className="border-y border-[#e1d6c9] bg-[#fbf8f3]"
+        className="overflow-hidden border-y border-[#e1d6c9] bg-[#fbf8f3]"
       >
-        <div className="mx-auto max-w-7xl px-6 py-24 md:px-10">
-          <div className="max-w-3xl">
-            <p className="text-sm font-medium uppercase tracking-[0.24em] text-[#6c6256]">
-              Experiences
-            </p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
-              Recovery designed to feel social, intentional, and worth returning to.
-            </h2>
+        <div className="mx-auto grid max-w-7xl gap-0 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="px-6 py-24 md:px-10">
+            <div className="max-w-3xl">
+              <p className="text-sm font-medium uppercase tracking-[0.24em] text-[#6c6256]">
+                Experiences
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
+                Recovery designed to feel social, intentional, and worth returning to.
+              </h2>
+            </div>
+
+            <div className="mt-12 grid gap-6 md:grid-cols-2">
+              {experiences.map((item, i) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.28 }}
+                  transition={{ duration: 0.55, delay: i * 0.08 }}
+                  className="rounded-[1.75rem] border border-[#e3d7ca] bg-white p-8 shadow-[0_10px_35px_rgba(24,21,18,0.04)]"
+                >
+                  <h3 className="text-2xl font-semibold tracking-tight">{item.title}</h3>
+                  <p className="mt-4 text-base leading-7 text-[#5b5349]">{item.body}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {experiences.map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.28 }}
-                transition={{ duration: 0.55, delay: i * 0.08 }}
-                className="rounded-[1.75rem] border border-[#e3d7ca] bg-white p-8 shadow-[0_10px_35px_rgba(24,21,18,0.04)]"
-              >
-                <h3 className="text-2xl font-semibold tracking-tight">{item.title}</h3>
-                <p className="mt-4 text-base leading-7 text-[#5b5349]">{item.body}</p>
-              </motion.div>
-            ))}
+          <div className="min-h-[420px] lg:min-h-full">
+            <div
+              className="h-full w-full bg-cover bg-center"
+              style={{
+                backgroundImage:
+                  "linear-gradient(rgba(18,15,12,0.12), rgba(18,15,12,0.22)), url('/sauna-lounge.jpg')"
+              }}
+            />
           </div>
         </div>
       </motion.section>
@@ -271,10 +266,20 @@ export default function App() {
 
       <motion.section
         {...sectionFade}
-        className="border-y border-[#e1d6c9] bg-[#efe6d8]"
+        className="overflow-hidden border-y border-[#e1d6c9] bg-[#efe6d8]"
       >
-        <div className="mx-auto max-w-7xl px-6 py-24 md:px-10">
-          <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
+        <div className="mx-auto grid max-w-7xl gap-0 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="min-h-[420px] lg:min-h-full">
+            <div
+              className="h-full w-full bg-cover bg-center"
+              style={{
+                backgroundImage:
+                  "linear-gradient(rgba(18,15,12,0.18), rgba(18,15,12,0.28)), url('/sauna-detail.jpg')"
+              }}
+            />
+          </div>
+
+          <div className="px-6 py-24 md:px-10">
             <div>
               <p className="text-sm font-medium uppercase tracking-[0.24em] text-[#6c6256]">
                 Amenities
@@ -284,7 +289,7 @@ export default function App() {
               </h2>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="mt-10 grid gap-4 sm:grid-cols-2">
               {amenities.map((item, i) => (
                 <motion.div
                   key={item}
